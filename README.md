@@ -8,5 +8,6 @@ A rest-api made with golang, for guys/girls to by stuff. \\//**🙃🙃🙃**\\/
 1. cmd - all the entry-points for our applications are stores in CMD
    directory
 
-2. migrate - migrate will store all the migration files for our
+   1.1. migrate - migrate will store all the migration files for our
    database changes
+   1.2 api - api will contain the business logic of our application

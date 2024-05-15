@@ -5,4 +5,4 @@ build:
 test:
 	@go test -v ./..
 run: build
-	@go run ./build/shopping_cart
+	@./build/shopping_cart
