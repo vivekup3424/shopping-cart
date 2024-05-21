@@ -56,7 +56,7 @@ type UserDB interface {
 	GetUserByID(id string) (*User, error)
 	GetUserByEmail(email string) (*User, error)
 	UpdateUser(user User) error
-	DeleteUser(id int64) error
+	DeleteUser(id string) error
 }
 
 // PasswordDB defines the interface for password database operations

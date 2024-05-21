@@ -89,3 +89,35 @@ func (s *Store) GetUserByEmail(email string) (
 	}
 	return &user, nil
 }
+func (s *Store) UpdateUser(user types.User) error {
+	query := `
+	UPDATE users
+	SET
+	first_name = $1,
+	last_name = $2,
+	email = $3,
+	password = $4
+	WHERE id = $5
+	`
+	_, err := s.db.Exec(query,
+		user.FirstName,
+		user.LastName,
+		user.Email,
+		user.Password,
+		user.ID)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+func (s *Store) DeleteUser(id string) error {
+	query := `
+	DELETE FROM users
+	WHERE id = $1
+	`
+	_, err := s.db.Exec(query, id)
+	if err != nil {
+		return err
+	}
+	return nil
+}
