@@ -27,6 +27,12 @@ func (A *APIServer) Run() error {
 	userService := user.NewHandler()
 	userService.RegisterRoutes(subrouter) //what the heck is this shit
 	//I dont even understand, I am just copying pasting
+	subrouter.HandleFunc("POST /register", func(w http.ResponseWriter, r *http.Request) {
+
+	})
+	subrouter.HandleFunc("POST /login", func(w http.ResponseWriter, r *http.Request) {})
+	subrouter.HandleFunc("GET /products", func(w http.ResponseWriter, r *http.Request) {})
+	subrouter.HandleFunc("POST /cart/checkout", func(w http.ResponseWriter, r *http.Request) {})
 	log.Printf("listening on: %s", A.addr)
 	return http.ListenAndServe(A.addr, router)
 }
