@@ -11,5 +11,5 @@ func MySQLStorage(cfg mysql.Config) (*sql.DB, error) {
 	if err != nil {
 		panic(err) //@DANGERRRRRR!!!
 	}
-	return db, nil
+	return db,nil
 }
