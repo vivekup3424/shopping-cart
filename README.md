@@ -1,6 +1,6 @@
 # shopping-cart
 
-A rest-api made with golang, for guys/girls to by stuff. \\//**🙃🙃🙃**\\//
+A rest-api made with golang, for guys/girls to buy shit. \\//**🙃🙃🙃**\\//
 ![workflow](./static/images/1.png)
 
 ## Some code guidelines followed
